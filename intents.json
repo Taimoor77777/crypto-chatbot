@@ -1,0 +1,265 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hello", "hi", "hey", "good morning", "good evening", "what's up"],
+      "responses": ["Hey there! 👋 How can I help you with crypto today?", "Hi! Need help with something in crypto?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you later", "exit", "quit", "bye bye"],
+      "responses": ["Goodbye! 👋 Stay safe and invest wisely!", "See you later!"]
+    },
+    {
+      "tag": "what_is_bitcoin",
+      "patterns": ["what is bitcoin", "explain bitcoin", "define bitcoin", "tell me about bitcoin"],
+      "responses": ["Bitcoin is a decentralized digital currency without a central bank, powered by blockchain technology."]
+    },
+    {
+      "tag": "what_is_ethereum",
+      "patterns": ["what is ethereum", "explain ethereum", "define ethereum", "tell me about ethereum"],
+      "responses": ["Ethereum is a decentralized blockchain platform that enables smart contracts and decentralized apps (dApps)."]
+    },
+    {
+      "tag": "defi_basics",
+      "patterns": ["what is defi", "explain defi", "defi meaning", "how does defi work", "tell me about decentralized finance"],
+      "responses": ["DeFi refers to Decentralized Finance — financial services like lending, trading, and borrowing built on blockchain without banks."]
+    },
+    {
+      "tag": "wallet_types",
+      "patterns": ["types of crypto wallets", "what is a wallet", "difference between hot and cold wallet", "explain crypto wallets"],
+      "responses": ["Crypto wallets can be hot (connected to the internet) or cold (offline). Cold wallets are safer for long-term storage."]
+    },
+    {
+      "tag": "stablecoins",
+      "patterns": ["what are stablecoins", "explain stablecoins", "usdt and usdc", "stablecoin meaning"],
+      "responses": ["Stablecoins are cryptocurrencies tied to a stable asset like the US Dollar — examples include USDT and USDC."]
+    },
+    {
+      "tag": "candlestick_chart",
+      "patterns": ["what is a candlestick", "explain candlestick chart", "how to read candles", "chart patterns"],
+      "responses": ["A candlestick chart shows price movement. Green = price went up. Red = price went down. Each candle shows open, close, high, and low."]
+    },
+    {
+      "tag": "rsi_meaning",
+      "patterns": ["what is rsi", "explain rsi", "rsi in trading", "relative strength index"],
+      "responses": ["RSI (Relative Strength Index) is a momentum indicator used to check if a coin is overbought or oversold."]
+    },
+    {
+      "tag": "buying_crypto",
+      "patterns": ["how to buy crypto", "buy bitcoin", "where to buy ethereum", "purchase crypto"],
+      "responses": ["You can buy crypto using exchanges like Binance, Coinbase, or Kraken. Use a wallet and enable 2FA for safety."]
+    },
+    {
+      "tag": "gas_fees",
+      "patterns": ["what are gas fees", "explain ethereum gas fees", "why are gas fees high"],
+      "responses": ["Gas fees are transaction costs on networks like Ethereum. They go up when the network is congested."]
+    },
+    {
+      "tag": "blockchain_explained",
+      "patterns": ["what is blockchain", "explain blockchain", "how does blockchain work"],
+      "responses": ["Blockchain is a decentralized ledger that records transactions securely and transparently."]
+    },
+    {
+      "tag": "crypto_safety",
+      "patterns": ["how to stay safe in crypto", "avoid scams", "protect my crypto", "crypto safety tips"],
+      "responses": ["Always use 2FA, avoid suspicious links, and never share your private keys. Use cold wallets for large funds."]
+    },
+    {
+      "tag": "portfolio_tips",
+      "patterns": ["how to build a crypto portfolio", "investing tips", "diversify crypto", "best coins to invest in"],
+      "responses": ["Diversify your portfolio across Bitcoin, Ethereum, stablecoins, and some altcoins. Don’t put all funds in one coin."]
+    },
+    {
+      "tag": "fomo",
+      "patterns": ["what is fomo", "fomo in crypto", "fear of missing out"],
+      "responses": ["FOMO stands for Fear Of Missing Out — a feeling that causes you to buy when prices are high. Avoid emotional trading!"]
+    },
+    {
+      "tag": "bear_market",
+      "patterns": ["what is a bear market", "explain bear market", "crypto market down", "market crash"],
+      "responses": ["A bear market is when crypto prices fall for an extended period, usually driven by fear and uncertainty."]
+    },
+    {
+  "tag": "altcoins",
+  "patterns": ["what are altcoins", "explain altcoins", "is dogecoin an altcoin", "types of altcoins"],
+  "responses": ["Altcoins are any cryptocurrencies that are alternatives to Bitcoin. Examples include Ethereum, Solana, Dogecoin, and Cardano."]
+},
+{
+  "tag": "nfts",
+  "patterns": ["what are NFTs", "explain NFTs", "how do NFTs work", "NFT meaning"],
+  "responses": ["NFTs (Non-Fungible Tokens) are unique digital assets stored on a blockchain. They can represent art, music, collectibles, and more."]
+},
+{
+  "tag": "staking",
+  "patterns": ["what is staking", "how to stake crypto", "explain staking", "staking vs mining"],
+  "responses": ["Staking involves locking up your crypto in a blockchain to earn rewards. It supports network security and works with Proof-of-Stake coins."]
+},
+{
+  "tag": "mining",
+  "patterns": ["what is mining", "how does crypto mining work", "bitcoin mining", "mining hardware"],
+  "responses": ["Mining is the process of verifying blockchain transactions by solving complex problems. It's how new Bitcoins and other Proof-of-Work coins are created."]
+},
+{
+  "tag": "airdrops",
+  "patterns": ["what is an airdrop", "crypto airdrop", "how to get airdrops", "explain airdrops"],
+  "responses": ["Airdrops are free distributions of cryptocurrency to users. Projects use them for promotion or rewarding early supporters."]
+},
+{
+  "tag": "private_key",
+  "patterns": ["what is a private key", "explain private key", "why is private key important", "wallet key meaning"],
+  "responses": ["A private key is a secret code that lets you access and control your crypto. If someone gets it, they can steal your coins. Never share it."]
+},
+{
+  "tag": "public_key",
+  "patterns": ["what is a public key", "explain public key", "public key vs private key"],
+  "responses": ["A public key is like your crypto address — people use it to send you coins. It's safe to share, unlike your private key."]
+},
+{
+  "tag": "dapps",
+  "patterns": ["what are dapps", "dapp meaning", "examples of dapps", "how do dapps work"],
+  "responses": ["dApps (decentralized applications) are apps built on blockchain platforms like Ethereum. They run on smart contracts and don't rely on central servers."]
+},
+{
+  "tag": "leverage",
+  "patterns": ["what is leverage in crypto", "leverage trading", "explain 10x leverage", "risk of leverage"],
+  "responses": ["Leverage allows you to trade with more money than you have. For example, 10x leverage means a 1% move can give you 10% profit — or loss. It's risky."]
+},
+{
+  "tag": "trading_bots",
+  "patterns": ["what is a crypto trading bot", "explain trading bots", "how do crypto bots work"],
+  "responses": ["Crypto trading bots are automated programs that buy and sell based on strategies. They can trade faster and without emotions."]
+},
+{
+  "tag": "smart_contracts",
+  "patterns": ["what are smart contracts", "explain smart contracts", "how do smart contracts work"],
+  "responses": ["Smart contracts are self-executing contracts with terms written in code. They run on blockchain and execute automatically when conditions are met."]
+},
+{
+  "tag": "hodl",
+  "patterns": ["what is hodl", "hodl meaning", "hodl in crypto", "should I hodl"],
+  "responses": ["HODL is a slang for holding onto your crypto instead of selling. It started as a typo but became popular during market crashes."]
+},
+{
+  "tag": "rug_pull",
+  "patterns": ["what is a rug pull", "rug pull in crypto", "explain rugpull", "how to avoid rugpull"],
+  "responses": ["A rug pull is a type of scam where a project’s developers suddenly withdraw funds and disappear. Always research before investing."]
+},
+{
+  "tag": "fud",
+  "patterns": ["what is fud", "fud meaning", "fud in crypto", "explain fud"],
+  "responses": ["FUD stands for Fear, Uncertainty, and Doubt. It refers to negative news or rumors that cause panic and selling in the crypto market."]
+},
+{
+  "tag": "proof_of_stake",
+  "patterns": ["what is proof of stake", "explain pos", "how does proof of stake work"],
+  "responses": ["Proof of Stake is an energy-efficient consensus mechanism where validators are selected based on their staked coins, not computing power."]
+},
+{
+  "tag": "proof_of_work",
+  "patterns": ["what is proof of work", "explain pow", "how does proof of work work"],
+  "responses": ["Proof of Work is a consensus mechanism used by blockchains like Bitcoin. Miners solve complex puzzles to validate transactions."]
+},
+{
+  "tag": "halving",
+  "patterns": ["what is bitcoin halving", "explain halving", "how does halving affect bitcoin"],
+  "responses": ["Bitcoin halving is when the reward for mining new blocks is cut in half. It happens every ~4 years and can affect supply and price."]
+},
+{
+  "tag": "whale",
+  "patterns": ["what is a crypto whale", "explain whale", "who are whales in crypto"],
+  "responses": ["A 'whale' is someone who holds a large amount of a cryptocurrency. Their trades can impact the market significantly."]
+},
+{
+  "tag": "satoshi",
+  "patterns": ["what is a satoshi", "satoshi in bitcoin", "satoshi meaning"],
+  "responses": ["A satoshi is the smallest unit of Bitcoin. 1 BTC = 100,000,000 satoshis."]
+},
+{
+  "tag": "ico",
+  "patterns": ["what is an ico", "explain initial coin offering", "ico meaning"],
+  "responses": ["An ICO (Initial Coin Offering) is a fundraising method where new crypto projects sell tokens to raise capital. It's like a crypto startup IPO."]
+},
+{
+  "tag": "seed_phrase",
+  "patterns": ["what is a seed phrase", "recovery phrase meaning", "how to use a seed phrase"],
+  "responses": ["A seed phrase is a 12 or 24-word secret key that restores your wallet. If someone gets it, they control your funds. Keep it private and safe."]
+},
+{
+  "tag": "hot_wallet",
+  "patterns": ["what is a hot wallet", "explain hot wallet", "online crypto wallet"],
+  "responses": ["A hot wallet is a crypto wallet connected to the internet. It's easy to use but more vulnerable to hacks."]
+},
+{
+  "tag": "cold_wallet",
+  "patterns": ["what is a cold wallet", "explain cold wallet", "offline crypto storage"],
+  "responses": ["A cold wallet is an offline storage method for cryptocurrencies. It's safer from hacking than hot (online) wallets."]
+},
+{
+  "tag": "token_vs_coin",
+  "patterns": ["difference between token and coin", "what is a token", "what is a coin"],
+  "responses": ["Coins like Bitcoin or Ethereum run on their own blockchains. Tokens are built on top of another blockchain, like ERC-20 tokens on Ethereum."]
+},
+{
+  "tag": "metamask",
+  "patterns": ["what is metamask", "how to use metamask", "metamask wallet"],
+  "responses": ["MetaMask is a crypto wallet and browser extension that lets you interact with Ethereum and DeFi apps. It stores private keys securely."]
+},
+{
+  "tag": "impermanent_loss",
+  "patterns": ["what is impermanent loss", "explain impermanent loss", "risk of liquidity pools"],
+  "responses": ["Impermanent loss occurs when you provide liquidity to a pool and the value of tokens changes compared to holding them. It's common in DeFi."]
+},
+{
+  "tag": "crypto_tax",
+  "patterns": ["do I have to pay tax on crypto", "crypto tax in pakistan", "tax rules for crypto"],
+  "responses": ["Crypto tax laws vary by country. In many places, crypto is taxable as income or capital gains. Always check your local regulations."]
+},
+{
+  "tag": "market_cap",
+  "patterns": ["what is market cap", "market capitalization meaning", "crypto market cap explained"],
+  "responses": ["Market cap is the total value of a cryptocurrency, calculated by multiplying the price by total coins in circulation."]
+},
+{
+  "tag": "bull_market",
+  "patterns": ["what is a bull market", "crypto going up", "bullish market meaning"],
+  "responses": ["A bull market is when asset prices are rising or expected to rise. It reflects investor confidence and optimism."]
+},
+{
+  "tag": "ido",
+  "patterns": ["what is an ido", "explain initial dex offering", "ido meaning"],
+  "responses": ["An IDO (Initial DEX Offering) is a token launch hosted on a decentralized exchange (DEX). It offers faster, open participation than ICOs."]
+},
+{
+  "tag": "slippage_problem",
+  "patterns": ["what is slippage", "i lost money to slippage", "how to avoid slippage"],
+  "responses": ["Slippage happens when the final trade price differs from what you expected. Use a lower slippage tolerance or trade during stable volume."]
+},
+{
+  "tag": "gas_fees_tips",
+  "patterns": ["how to reduce gas fees", "gas fee too high", "cheap gas tokens"],
+  "responses": ["Try using Layer 2 networks like Arbitrum or Optimism for lower fees. Or schedule your transactions when traffic is low (off-peak hours)."]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ]
+}
