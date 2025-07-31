@@ -1,0 +1,6 @@
+nltk
+scikit-learn
+flask
+flask-cors
+requests
+prettytable

@@ -68,7 +68,7 @@
     {
       "tag": "portfolio_tips",
       "patterns": ["how to build a crypto portfolio", "investing tips", "diversify crypto", "best coins to invest in"],
-      "responses": ["Diversify your portfolio across Bitcoin, Ethereum, stablecoins, and some altcoins. Don’t put all funds in one coin."]
+      "responses": ["Diversify your portfolio across Bitcoin, Ethereum, stablecoins, and some altcoins. Don't put all funds in one coin."]
     },
     {
       "tag": "fomo",
@@ -143,7 +143,7 @@
 {
   "tag": "rug_pull",
   "patterns": ["what is a rug pull", "rug pull in crypto", "explain rugpull", "how to avoid rugpull"],
-  "responses": ["A rug pull is a type of scam where a project’s developers suddenly withdraw funds and disappear. Always research before investing."]
+  "responses": ["A rug pull is a type of scam where a project's developers suddenly withdraw funds and disappear. Always research before investing."]
 },
 {
   "tag": "fud",
