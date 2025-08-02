@@ -1,94 +1,47 @@
-# from flask import Flask, request, jsonify
-# import pickle
-# import json
-# import nltk
-# from nltk.stem import PorterStemmer
-
-# app = Flask(__name__)
-
-# # Load model and vectorizer
-# model = pickle.load(open("model.pkl", "rb"))
-# vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
-# intents = json.load(open("intents.json"))
-
-# stemmer = PorterStemmer()
-
-# def clean_text(text):
-#     tokens = text.lower().split()
-#     return " ".join([stemmer.stem(w) for w in tokens])
-
-# def get_response(user_input):
-#     cleaned = clean_text(user_input)
-#     X = vectorizer.transform([cleaned])
-#     prediction = model.predict(X)[0]
-
-#     for intent in intents["intents"]:
-#         if intent["tag"] == prediction:
-#             return intent["responses"][0]
-
-#     return "Sorry, I don't understand that."
-
-# @app.route("/chat", methods=["POST"])
-# def chat():
-#     user_input = request.json.get("message", "")
-#     reply = get_response(user_input)
-#     return jsonify({"reply": reply})
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
-
-
 from flask import Flask, request, jsonify
-# import pickle
-# import json
-# import nltk
 from flask_cors import CORS
-# from nltk.stem import PorterStemmer
 from chatbot import get_response
-
 
 app = Flask(__name__)
 CORS(app)
 
-# # Load model and vectorizer
-# model = pickle.load(open("model.pkl", "rb"))
-# vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
-# intents = json.load(open("intents.json"))
-
-# stemmer = PorterStemmer()
-
-# def clean_text(text):
-#     tokens = text.lower().split()
-#     return " ".join([stemmer.stem(w) for w in tokens])
-
-# def get_response(user_input):
-#     cleaned = clean_text(user_input)
-#     X = vectorizer.transform([cleaned])
-#     prediction = model.predict(X)[0]
-
-#     for intent in intents["intents"]:
-#         if intent["tag"] == prediction:
-#             return intent["responses"][0]
-
-#     return "Sorry, I don't understand that."
-
-# @app.route("/chat", methods=["POST"])
-# def chat():
-#     user_input = request.json.get("message", "")
-#     reply = get_response(user_input)
-#     return jsonify({"reply": reply})
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
-
 @app.route("/chat", methods=["POST"])
 def chat():
-    data = request.get_json()
-    message = data.get("message", "")
-    reply = get_response(message)
-    if isinstance(reply, dict) and reply.get("type") == "table":
-        return jsonify(reply)
-    return jsonify({"reply": reply if isinstance(reply, str) else reply.get("reply", "")})
+    try:
+        data = request.get_json()
+        message = data.get("message", "")
+        
+        if not message:
+            return jsonify({"type": "text", "reply": "Please enter a message."})
+        
+       
+        response = get_response(message)
+        
+        if isinstance(response, dict):
+            if response.get("type") == "table":
+                return jsonify(response)
+            elif response.get("type") == "chart":
+                return jsonify(response)
+            elif response.get("type") == "news":
+                return jsonify(response)
+            elif response.get("type") == "market_info":
+                return jsonify(response)
+            elif response.get("type") == "text":
+                return jsonify(response)
+            else:
+                return jsonify(response)
+        elif isinstance(response, str):
+            return jsonify({"type": "text", "reply": response})
+        else:
+            return jsonify({"type": "text", "reply": str(response)})
+            
+    except Exception as e:
+        print(f"Error in chat endpoint: {e}")  
+        return jsonify({"type": "text", "reply": "❌ Something went wrong. Please try again."})
+
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "healthy", "message": "Crypto Chatbot API is running!"})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5000)

@@ -28,7 +28,6 @@ y = tags
 model = LogisticRegression()
 model.fit(X, y)
 
-# Save model and vectorizer
 pickle.dump(model, open("model.pkl", "wb"))
 pickle.dump(vectorizer, open("vectorizer.pkl", "wb"))
 
