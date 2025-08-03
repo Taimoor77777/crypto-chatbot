@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
+import CoinChart from "./components/CoinChart";
+
 
 export default function CryptoChatbot() {
   const [userInput, setUserInput] = useState("")
@@ -119,34 +121,42 @@ export default function CryptoChatbot() {
           </div>
         )
 
-      case "chart":
-        return (
+        case "chart":
+          return (
           <div key={idx} className="message-container bot">
-            <div className="chart-container">
-              <div className="chart-wrapper">
-                <div className="chart-header">
-                  <span className="chart-icon">📈</span>
-                  <h3 className="chart-title">{msg.title}</h3>
-                </div>
-                <div className="chart-content">
-                  <div className="simple-chart">
-                    {msg.data.map((point, i) => (
-                      <div key={i} className="chart-point">
-                        <div className="chart-date">{point.date}</div>
-                        <div className="chart-price">${point.price.toLocaleString()}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="chart-note">
-                    💡 This is a simple price list. For advanced charts, consider integrating Chart.js or similar
-                    library.
-                  </p>
-                </div>
-              </div>
-              <div className="message-label bot">🤖 CryptoBot</div>
-            </div>
+            <CoinChart data={msg.data} title={msg.title} coin={msg.coin} />
+            <div className="message-label bot">🤖 CryptoBot</div>
           </div>
         )
+
+      // case "chart":
+      //   return (
+      //     <div key={idx} className="message-container bot">
+      //       <div className="chart-container">
+      //         <div className="chart-wrapper">
+      //           <div className="chart-header">
+      //             <span className="chart-icon">📈</span>
+      //             <h3 className="chart-title">{msg.title}</h3>
+      //           </div>
+      //           <div className="chart-content">
+      //             <div className="simple-chart">
+      //               {msg.data.map((point, i) => (
+      //                 <div key={i} className="chart-point">
+      //                   <div className="chart-date">{point.date}</div>
+      //                   <div className="chart-price">${point.price.toLocaleString()}</div>
+      //                 </div>
+      //               ))}
+      //             </div>
+      //             <p className="chart-note">
+      //               💡 This is a simple price list. For advanced charts, consider integrating Chart.js or similar
+      //               library.
+      //             </p>
+      //           </div>
+      //         </div>
+      //         <div className="message-label bot">🤖 CryptoBot</div>
+      //       </div>
+      //     </div>
+      //   )
 
       case "news":
         return (
